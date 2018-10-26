@@ -263,7 +263,7 @@ class ChatFragment : PlaceSupportMvpFragment<ChatPrensenter, IChatView>(), IChat
             val aid = requireArguments().getInt(Extra.ACCOUNT_ID)
             val messagesOwnerId = requireArguments().getInt(Extra.OWNER_ID)
             val peer = requireArguments().getParcelable<Peer>(Extra.PEER)
-            return ChatPrensenter(aid, messagesOwnerId, peer, createStartConfig(), saveInstanceState)
+            return ChatPrensenter(aid, messagesOwnerId, peer!!, createStartConfig(), saveInstanceState)
         }
     }
 

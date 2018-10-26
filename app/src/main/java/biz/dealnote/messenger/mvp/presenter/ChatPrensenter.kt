@@ -120,8 +120,8 @@ class ChatPrensenter(accountId: Int, private val messagesOwnerId: Int,
                 draftMessageText = config.initialText
             }
         } else {
-            peer = savedInstanceState.getParcelable(SAVE_PEER)
-            outConfig = savedInstanceState.getParcelable(SAVE_CONFIG)
+            peer = savedInstanceState.getParcelable(SAVE_PEER)!!
+            outConfig = savedInstanceState.getParcelable(SAVE_CONFIG)!!
             currentPhotoCameraUri = savedInstanceState.getParcelable(SAVE_CAMERA_FILE_URI)
             restoreFromInstanceState(savedInstanceState)
         }
